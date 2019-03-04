@@ -1,5 +1,5 @@
 const {Accessory} = require("../models/Accessory.js")
-const {Apparel} = require("../Models/Accessory")
+const {Apparel} = require("../Models/Apparel.js")
 
 const applicationController = {
     index: (req, res) => {
@@ -7,8 +7,8 @@ const applicationController = {
         // Apparel.find().then(apparel => {
         // Accessory.find().then(accessory => {
         //     res.render('index', {apparel, accessory})
-        })
-    })
+        // })
+    // })
     }
 }
 
