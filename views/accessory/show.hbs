@@ -1,0 +1,15 @@
+<h2>{{accessory.name}} - {{accessory.listPrice}}</h2>
+<div class="container">
+<img class="apparelImg" src='{{accessory.imgLink}}'>
+</div>
+{{accessory.notes}}
+<br>
+<div>
+<a class="btn btn-primary" href="/accessory/{{accessory._id}}/edit">
+    Edit
+</a>
+
+<form class="delete-form" action="/accessory/{{accessory.id}}?_method=DELETE" method="POST">
+    <input class="action-btn btn btn-danger" type="submit" value="DELETE">
+</form>
+</div>
