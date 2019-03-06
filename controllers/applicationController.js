@@ -1,4 +1,4 @@
-const Accessory = require("../models/Accessory.js")
+const Accessory = require("../Models/Accessory.js")
 const Apparel = require("../Models/Apparel.js")
 
 const applicationController = {
