@@ -7,7 +7,7 @@ const authController = {
       res.redirect('/')
     }
 
-    res.render('signup')
+    res.render('signup', { message: req.flash('signupMessage') })
   },
   createUser: (req, res) => {
     const signupStrategy = passport.authenticate('local-signup', {
