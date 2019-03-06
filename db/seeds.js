@@ -36,7 +36,7 @@ const Belt = new Accessory({
 })
 
 User.remove({})
-.then(() => User.save())
+.then(() => Xander.save())
 .then(() => console.log("Users seeded"))
 .then(() => mongoose.connection.close())
 .catch(err => console.log(err, "error on user!"))
