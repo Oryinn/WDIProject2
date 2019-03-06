@@ -38,7 +38,7 @@ const accessoryController = {
         })
     },
     update: (req, res) => {
-        Accessory.findByIdAndDelete(req.params.accessoryId, req.body, {new: true}).then(()=> {
+        Accessory.findByIdAndUpdate(req.params.accessoryId, req.body, {new: true}).then(()=> {
             res.redirect(`/accessory/${req.params.accessoryId}`)
         })
     },

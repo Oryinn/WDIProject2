@@ -41,7 +41,7 @@ const apparelController = {
         })
     },
     update: (req, res) => {
-        Apparel.findByIdAndDelete(req.params.apparelId, req.body, {new: true}).then(()=> {
+        Apparel.findByIdAndUpdate(req.params.apparelId, req.body, {new: true}).then(()=> {
             res.redirect(`/apparel/${req.params.apparelId}`)
         })
     },
