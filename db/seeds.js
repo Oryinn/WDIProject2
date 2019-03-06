@@ -1,19 +1,16 @@
 const mongoose = require("./connection.js")
-//const User = require("../models/User.js")
+const User = require("../models/User.js")
 const Apparel = require("../Models/Apparel.js")
 const Accessory = require("../Models/Accessory.js")
 
 
-// User.deleteMany().then(() => {
-//     return Apparel.deleteMany()
-// }).then(() => {
-//     return Accessories.deleteMany()
-// })
-// const Xander = new User({
-//     name: "Xander",
-//     email: "Xvanderlip@gmail.com",
-//     password: "xv123",
-// })
+
+const Xander = new User({
+    name: "Xander",
+    email: "Xvanderlip@gmail.com",
+    password: "xv123",
+})
+
 
 const Tshirt = new Apparel({
     name: "Supreme Shirt",
@@ -38,13 +35,18 @@ const Belt = new Accessory({
     notes: "its a belt"
 })
 
+User.remove({})
+.then(() => User.save())
+.then(() => console.log("Users seeded"))
+.then(() => mongoose.connection.close())
+.catch(err => console.log(err, "error on user!"))
 Apparel.remove({})
 .then(() => Tshirt.save())
-.then(() => console.log("Seeded"))
+.then(() => console.log("Apparel Seeded"))
 .then(()=> mongoose.connection.close())
-.catch(err => console.log(err, "error!"))
+.catch(err => console.log(err, "error on apparel!"))
 Accessory.remove({})
 .then(() => Belt.save())
-.then(() => console.log("Seeded"))
+.then(() => console.log("Accessories Seeded"))
 .then(()=> mongoose.connection.close())
-.catch(err => console.log(err, "error!"))
+.catch(err => console.log(err, "error on accessories!"))
