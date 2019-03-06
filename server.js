@@ -26,6 +26,11 @@ app.use(passport.session())
 //router
 require('./config/passport.js')(passport)
 
+app.use(function (req, res, next) {
+    res.locals.currentUser = req.user
+    next()
+  })
+
 app.use('/', routes)
 
 const PORT = process.env.PORT || 3000

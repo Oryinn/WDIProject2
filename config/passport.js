@@ -3,7 +3,7 @@ const User = require('../Models/User')
 
 const passportConfig = (passport) => {
   const strategyFields = {
-    email: 'email',
+    usernameField: 'email',
     passwordField: 'password',
     passReqToCallback: true
   }
@@ -19,12 +19,9 @@ const passportConfig = (passport) => {
       } else {
         // Else create a user.
         const newUser = new User()
+        // newUser.local.name = name
         newUser.local.email = email
-        // Encrypt the users password for security.
-        // We need to create this function
         newUser.local.password = newUser.encrypt(password)
-
-        // Save the user, and return the saved user.
         newUser.save().then((saved) => {
           return callback(null, saved)
         })

@@ -15,9 +15,25 @@
     <header class="banner">
         <div class="container">
             <a href='/'>
-                <h1>Secondhand Selects</h1>
-            </a>
+                <h1>Secondhand Selects</h1> 
+            </a> 
+            {{#if currentUser}}
+            <span>Welcome - {{currentUser.local.email}}
+            {{/if}}
+</span>
         </div>
+        <nav class="navbar navbar-default">
+    <div class="container">
+        <ul class="nav navbar-nav">
+          {{#if currentUser}}
+          <li><a href="/logout">Logout {{currentUser.local.name}}</a></li>
+          {{else}}
+          <li><a href="/login">Login</a></li>
+          {{!-- <li><a href="/signup">Signup</a></li> --}}
+          {{/if}}
+        </ul>
+    </div>
+  </nav>
     </header>
     {{{ body }}}
 </body>
