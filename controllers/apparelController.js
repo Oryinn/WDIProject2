@@ -2,7 +2,7 @@ const Apparel = require("../Models/Apparel.js")
 
 const apparelController = {
     index: (req, res) => {
-        Apparel.find().then((apparel) => {
+        Apparel.find({isSold: false}).then((apparel) => {
                 res.render('apparel/index',{
                 apparel:apparel
             })
@@ -34,10 +34,15 @@ const apparelController = {
     edit: (req, res) => {
         Apparel.findById(req.params.apparelId)
         .then(apparel => {
-            res.render('apparel/edit', {
+            res.render('/apparel/edit', {
                 apparel,
 
             })
+        })
+    },
+    sold: (req, res) => {
+        Apparel.findByIdAndUpdate(req.params.apparelId, req.body, {new: true}).then(() => {
+            res.redirect(`/apparel`)
         })
     },
     update: (req, res) => {

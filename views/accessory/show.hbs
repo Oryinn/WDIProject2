@@ -9,11 +9,17 @@
 </div>
 <br>
 <div class="container">
+    {{#if currentUser}}
 <a class="btn btn-primary" href="/accessory/{{accessory._id}}/edit">
     Edit
 </a>
+<form class="isSold" action="/accessory/{{accessory.id}}?_method=PUT" method="POST">
+    <input type="checkbox" name="isSold" value="true">
+    <input class="btn btn-success" type="submit" value="Mark as Sold">
+</form>
 
 <form class="delete-form" action="/accessory/{{accessory.id}}?_method=DELETE" method="POST">
     <input class="action-btn btn btn-danger" type="submit" value="DELETE">
 </form>
+{{/if}}
 </div>

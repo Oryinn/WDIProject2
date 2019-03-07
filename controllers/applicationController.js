@@ -4,8 +4,8 @@ const Apparel = require("../Models/Apparel.js")
 const applicationController = {
     index: (req, res) => {
         // res.send('test, connected')
-        Apparel.find().then(apparel => {
-        Accessory.find().then(accessory => {
+        Apparel.find({isSold: false}).then(apparel => {
+        Accessory.find({isSold: false}).then(accessory => {
             res.render('index', {apparel, accessory})
         })
     })

@@ -8,7 +8,11 @@ const Accessory = new Schema({
     listPrice: Number,
     imgLink: String,
     boughtDate: Date,
-    notes: String
+    notes: String,
+    isSold: {
+        type: Boolean,
+        default: false
+    }
 })
 
 module.exports = mongoose.model("Accessory", Accessory)

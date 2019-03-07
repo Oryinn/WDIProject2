@@ -15,6 +15,7 @@ router.get('/apparel/new', apparelController.new)
 router.post('/apparel', apparelController.create)
 router.get('/apparel/:apparelId', apparelController.show)
 router.get('/apparel/:apparelId/edit', apparelController.edit)
+router.put('/apparel/:apparelId', apparelController.sold)
 router.put('/apparel/:apparelId', apparelController.update)
 router.delete('/apparel/:apparelId', apparelController.delete)
 
