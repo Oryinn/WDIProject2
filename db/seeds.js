@@ -19,10 +19,7 @@ const Tshirt = new Apparel({
     boughtPrice: 5.00,
     listPrice: 10.00,
     imgLink: "https://i.imgur.com/vOU4AZb.jpg",
-    // boughtDate: {
-    //     type: Date,
-    //     default: Date.now()
-    // },
+    boughtDate: new Date("<2019-03-07>"),
     notes: "It's a t-shirt"
 })
 
@@ -32,6 +29,7 @@ const Belt = new Accessory({
     boughtPrice: 10.00,
     listPrice: 15.00,
     imgLink: "https://www.crossbreedholsters.com/pub/media/catalog/product/cache/1/image/768x550/e9c3970ab036de70892d86c6d221abfe/c/r/crossoverbelt_flatblack_black_1536x1100.png",
+    boughtDate: new Date("<2019-03-07>"),
     notes: "its a belt"
 })
 

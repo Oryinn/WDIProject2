@@ -6,7 +6,7 @@ const User = new Schema({
   local: {
     name: String,
     email: String,
-    password: String,
+    password: String
   }
 })
 

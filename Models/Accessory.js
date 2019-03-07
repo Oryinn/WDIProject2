@@ -7,10 +7,7 @@ const Accessory = new Schema({
     boughtPrice: Number,
     listPrice: Number,
     imgLink: String,
-    boughtDate: {
-        type: Date,
-        default: Date.now()
-    },
+    boughtDate: Date,
     notes: String
 })
 
