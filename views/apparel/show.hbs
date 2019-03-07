@@ -1,8 +1,13 @@
+<div class="container">
 <h2>{{apparel.name}} - {{apparel.listPrice}}</h2>
 <img class="apparelImg" src='{{apparel.imgLink}}'>
+</div>
+<div class="container">
 <a class="btn btn-primary" href="/apparel/{{apparel._id}}/edit">
     Edit
 </a>
+
 <form class="delete-form" action="/apparel/{{apparel.id}}?_method=DELETE" method="POST">
     <input class="action-btn btn btn-danger" type="submit" value="DELETE">
 </form>
+</div>

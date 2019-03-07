@@ -1,55 +1,56 @@
 <div class="container">
     <a class="btn btn-info" href="/apparel">View Apparel</a>
     <a class="btn btn-info" href="/accessory">View Accessories</a>
-</div>
-<br>
-<div class="container">
-
+    {{#if currentUser}}
     <a class="btn btn-info" href="/apparel/new">+ Add Apparel</a>
     <a class="btn btn-info" href="/accessory/new">+ Add Accessory</a>
-
+    {{/if}}
 </div>
-{{#each apparel}}
-<div class="row">
-    <div class="col-sm-6">
-        <img class="apparelImg" src={{imgLink}}>
-        <div class="col-sm-8">
-            <div class="row">
-                <div>
-                    <h4>
-                        <a href='/apparel/{{_id}}'>{{name}}</a>
-                    </h4>
-                    ${{listPrice}} {{#if ../currentUser}}
-                    <span>Bought for: ${{boughtPrice}}
-                        {{/if}}
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col">
-                    {{notes}}
-                </div>
-            </div>
-        </div>
-        {{/each}}
-        {{#each accessory}}
-        <div class="row">
-            <div class="col-sm-6">
-                <img class="apparelImg" src={{imgLink}}>
-                <div class="col-sm-8">
-                    <div class="row">
-                        <div >
-                            <h4>
-                                <a href='/accessory/{{id}}'>{{name}}</a>
-                            </h4>
-                            ${{listPrice}}
-                        </div>
-
+<div class="container">
+    {{#each apparel}}
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="apparelImg" src={{imgLink}}>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div>
+                        <h4>
+                            <a href='/apparel/{{_id}}'>{{name}}</a>
+                        </h4>
+                        ${{listPrice}} {{#if ../currentUser}}
+                        <span>Bought for: ${{boughtPrice}}
+                            {{/if}}
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            {{notes}}
-                        </div>
+
+                </div>
+                <div class="row">
+                    <div class="col">
+                        {{notes}}
                     </div>
                 </div>
-                {{/each}}
+            </div>
+            {{/each}}
+            {{#each accessory}}
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="apparelImg" src={{imgLink}}>
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div>
+                                <h4>
+                                    <a href='/accessory/{{id}}'>{{name}}</a>
+                                </h4>
+                                ${{listPrice}} {{#if ../currentUser}}
+                                <span>Bought for: ${{boughtPrice}}
+                                    {{/if}}
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                {{notes}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>

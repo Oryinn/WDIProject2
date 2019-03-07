@@ -1,10 +1,14 @@
-<h2>{{accessory.name}} - {{accessory.listPrice}}</h2>
 <div class="container">
+<h2>{{accessory.name}} - {{accessory.listPrice}}</h2>
+
 <img class="apparelImg" src='{{accessory.imgLink}}'>
+
 </div>
+<div class="container">
 {{accessory.notes}}
+</div>
 <br>
-<div>
+<div class="container">
 <a class="btn btn-primary" href="/accessory/{{accessory._id}}/edit">
     Edit
 </a>
