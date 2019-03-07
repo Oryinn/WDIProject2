@@ -15,7 +15,7 @@
     <header class="banner">
         <div class="container">
             <a href='/'>
-                <h1>Secondhand Selects</h1>
+                <img class="headimg" src="https://i.imgur.com/VoqtGTQ.jpg">
             </a>
                 <ul class="login nav navbar-nav">
                     {{#if currentUser}}
@@ -26,9 +26,9 @@
                     {{/if}}
                 </ul>
             {{#if currentUser}}
-            <span>Welcome - {{currentUser.local.email}}
+            <div>Welcome - {{currentUser.local.email}}
                 {{/if}}
-            </span>
+            </div>
         </div>
         
     </header>

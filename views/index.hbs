@@ -18,7 +18,8 @@
                             <a href='/apparel/{{_id}}'>{{name}}</a>
                         </h4>
                         ${{listPrice}} {{#if ../currentUser}}
-                        <span>Bought for: ${{boughtPrice}}
+                        <div>Bought for: ${{boughtPrice}}</div>
+                        <div>Bought: {{boughtDate}}</div>
                             {{/if}}
                     </div>
 
@@ -41,7 +42,8 @@
                                     <a href='/accessory/{{id}}'>{{name}}</a>
                                 </h4>
                                 ${{listPrice}} {{#if ../currentUser}}
-                                <span>Bought for: ${{boughtPrice}}
+                                <div>Bought for: ${{boughtPrice}}</div>
+                                <div>Bought: {{boughtDate}}</div>
                                     {{/if}}
                             </div>
 
