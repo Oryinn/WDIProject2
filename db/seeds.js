@@ -1,5 +1,5 @@
 const mongoose = require("./connection.js")
-const User = require("../models/User.js")
+const User = require("../Models/User.js")
 const Apparel = require("../Models/Apparel.js")
 const Accessory = require("../Models/Accessory.js")
 
