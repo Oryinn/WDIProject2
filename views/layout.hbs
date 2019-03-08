@@ -17,20 +17,21 @@
             <a href='/'>
                 <img class="headimg" src="https://i.imgur.com/VoqtGTQ.jpg">
             </a>
-                <ul class="login nav navbar-nav">
-                    {{#if currentUser}}
-                    <a class="btn btn-primary" href="/logout">Logout {{currentUser.local.name}}</a>
-                    {{else}}
-                    <a class="btn btn-primary" href="/login">Login</a>
-                    <a class="btn btn-primary" href="/admin">Admin</a>
-                    {{/if}}
-                </ul>
+            <ul class="login nav navbar-nav">
+                {{#if currentUser}}
+                <a class="btn btn-primary" href="/logout">Logout {{currentUser.local.name}}</a>
+                <a class="btn btn-primary" href="/admin">Admin</a>
+                {{else}}
+                <a class="btn btn-primary" href="/login">Login</a>
+                
+                {{/if}}
+            </ul>
             {{#if currentUser}}
             <div>Welcome - {{currentUser.local.email}}
                 {{/if}}
             </div>
         </div>
-        
+
     </header>
     {{{ body }}}
 </body>
