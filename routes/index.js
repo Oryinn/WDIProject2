@@ -24,6 +24,7 @@ router.get('/accessory/new', accessoryController.new)
 router.post('/accessory', accessoryController.create)
 router.get('/accessory/:accessoryId', accessoryController.show)
 router.get('/accessory/:accessoryId/edit', accessoryController.edit)
+router.put('/apparel/:accessoryId', accessoryController.sold)
 router.put('/accessory/:accessoryId', accessoryController.update)
 router.delete('/accessory/:accessoryId', accessoryController.delete)
 
