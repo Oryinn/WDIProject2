@@ -1,8 +1,10 @@
-{{#if currentUser}}
+
 <div>
+    {{#if currentUser}}
     <a class="btn btn-info" href="/accessory/new">+ Add Accessory</a>
+    {{/if}}
 </div>
-{{/if}}
+
 {{#each accessory}}
     <div class="row">
         <div class="col-sm-8">
