@@ -40,7 +40,7 @@ const accessoryController = {
     },
     sold: (req, res) => {
         Accessory.findByIdAndUpdate(req.params.accessoryId, req.body, {new: true}).then(() => {
-            res.redirect(`/apparel`)
+            res.redirect(`/admin`)
         })
     },
     update: (req, res) => {

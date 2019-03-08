@@ -53,7 +53,7 @@ const apparelController = {
     delete: (req, res) => {
         Apparel.findByIdAndDelete(req.params.apparelId).then(() => {
             console.log(`Deleted Apparel with the id of ${req.params.apparelId}`)
-            res.redirect('/')
+            res.redirect('/admin')
         })
     }
 }
